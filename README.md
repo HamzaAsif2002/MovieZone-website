@@ -1,4 +1,4 @@
-# 🎬 MovieFZone – React Movie Website
+# 🎬 MovieZone – React Movie Website
 
 MovieFlix is a responsive and visually appealing movie website built using **React**, **Tailwind CSS**, and **Vite**. The app showcases a modern UI with a hero carousel, categorized movie sections, and interactive cards for movies, series, and cartoons.
 
