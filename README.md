@@ -5,9 +5,6 @@ MovieFlix is a responsive and visually appealing movie website built using **Rea
 ---
 
 ## 📸 Screenshots
-
-> Replace these with actual image links from your project or GitHub repo.
-
 | Home Page  
 | ------------------------------------
 | ![Home Page](./src/assets/screenShot.png)
