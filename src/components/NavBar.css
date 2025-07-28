@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 100;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  padding: 20px;
+}
+.rotating-logo {
+  display: inline-block;
+  font-size: 38px;
+  animation: dance 0.6s ease-in-out infinite alternate;
+  margin-right: 10px;
+}
+
+@keyframes dance {
+  0% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(5px) rotate(5deg);
+  }
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4d4f;
+  padding: 20px;
+}
+
+.icons li {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.icons li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+.button-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s;
+}
+
+.button-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #fa070b;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.button-hover:hover::before {
+  width: 100%; /* Expand to full on hover */
+}
+
+@media (max-width: 900px) {
+  .icons {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    animation: fadeIn 0.3s ease-in-out;
+    justify-content: center;
+  }
+
+  .icons.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .button-hover {
+    width: max-content;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
