@@ -3,9 +3,9 @@ import "./CrouselSection.css";
 import { Crousel } from "./Crousel.jsx";
 
 // Importing images properly if you're using Vite/Webpack
-import img1 from "../assets/john wick.jpg";
+import img1 from "../assets/john_wick.jpg";
 import img2 from "../assets/black-banner.png";
-import img3 from "../assets/GATG vol3.jpeg";
+import img3 from "../assets/GATG_vol3.jpeg";
 
 const images = [
   {
